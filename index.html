@@ -82,13 +82,12 @@
   </p>
   <p class="our-name self-design">Karolina  &nbsp;<span>&</span>&nbsp;Yining</p>
   <script type="text/javascript">
-    //设置起始日期
     countTime('2021/11/07 00:00', 'day', 'hour', 'minute', 'second');
     var days = parseInt($('#day').text());
     var years = new Date().getFullYear();
     var month = new Date().getMonth() + 1;
     var dateDay = new Date().getDate();
-    // 设置标题
+    
     if (month == 2 && dateDay == 12) {
       $(document).attr("title", "Happy Birthday");
     } else if (dateDay == 12) {
@@ -105,7 +104,7 @@
         return
       }
       var container = document.querySelector(".snow");
-      // IE9-10 pointer-events兼容
+      
       if (/MSIE 9|MSIE 10/.test(navigator.userAgent)) {
         $(container).bind('click mousemove', function (evt) {
           this.style.display = 'none';
@@ -205,7 +204,7 @@
       function loop() {
         for (var i = 0; i < particles.length; i++) {
           var particle = particles[i];
-          // 滚动到楼层模块，减少雪花 （自定义）
+          
           if ($(window).scrollTop() < 1000) {
             particle.scale.x = particle.scale.y = 1;
           } else {
@@ -254,10 +253,10 @@
   // var playVideo = document.querySelector('.our-name');
   var musicCloseDom = musicDom.querySelector('.music-close');
   var curImgDom = document.getElementById('current-img');
-  if ( audioDom.readyState == 4) { // android会走此逻辑
+  if ( audioDom.readyState == 4) { 
       // @todo
       console.log('loaded');
-  } else { // iOS走此逻辑
+  } else { 
       audioDom.addEventListener('play', function () {
           try {
               musicCloseDom.classList.add('rotate');
@@ -267,8 +266,7 @@
       }, false);
       audioDom.addEventListener('canplaythrough', function () {
           try {
-              // chrome浏览器没有也页面交互（点击，滚动）之前会报错误---Uncaught（in promise）DOMException：play（）
-              //处理方法设置浏览器autoplay-policy---https://blog.csdn.net/super_XYQ/article/details/83026792
+              
               var promise = audioDom.play();
               if (promise !== undefined) {
                   promise.then(function () {
