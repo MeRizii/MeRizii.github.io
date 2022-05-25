@@ -114,13 +114,13 @@ ul {
   position: relative;
   margin: 0 auto;
   text-align: center;
-  width: 75vw;
-  max-height: 40vh;
-  min-height: 200px;
+  width: 100vw;
+  max-height: 90vh;
+  min-height: 325px;
   max-width: 600px;
   /* width: 75%; */
-  margin: 5vh;
-  border: 10px solid #fff;
+  margin: 2vh;
+  border: 5px solid #fff;
   display: flex;
   justify-content: center;
   align-items: center
