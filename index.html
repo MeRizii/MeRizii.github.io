@@ -39,18 +39,14 @@
 <body>
   <div class="music">
     <i class="iconfont music-close">&#xea28;</i>
-    <!-- <audio class="audio" src="./media/dongxi-md.mp3" preload autoplay loop></audio>  -->
     <audio class="audio" preload autoplay loop>
       <source src="./media/Daniel Caesar - Best Part (Audio) ft. H.E.R..mp3" type="audio/mp3" /> Your browser does not support the audio element.</audio> 
   </div>
   <div class="banner ovh">
     <div class="swiper-wrap">
-      <!-- <img src="./images/DSC_0692_mix01.jpg" alt=""> -->
-      <!-- <img src="./img/20180319230435.jpg" alt=""> -->
       <img id="current-img" src="./images/gif3.gif" alt="">
       <p class="img-intro">Hi baby</p>
     </div>
-    <!-- <video class="video hide" webkit-playsinline="" playsinline="" x5-playsinline="" controls loop src=""></video> -->
   </div>
   <p class="intro self-design">Happy Birthday Yining </p>      
   <p class="intro self-design">Cant wait to spend more time with you</p>
@@ -138,11 +134,6 @@
       var windowHalfY = window.innerHeight / 2;
       var particles = [];
       var particleImages = [new Image(), new Image(), new Image(), new Image(), new Image()];
-      // particleImages[0].src = "./images/snow1.png";
-      // particleImages[1].src = "./images/snow2.png";
-      // particleImages[2].src = "./images/snow3.png";
-      // particleImages[3].src = "./images/snow4.png";
-      // particleImages[4].src = "./images/snow5.png";
       particleImages[0].src = "./img/151375665240370100.png";
       particleImages[1].src = "./img/151375668550091372.png";
       particleImages[2].src = "./img/151375669416355455.png";
@@ -244,11 +235,7 @@
 </body>
 <script>
   var musicDom = document.querySelector('.music');
-  // var bannerDom = document.querySelector('.banner');
   var audioDom = document.querySelector('.audio');
-  // var videoDom = document.querySelector('.video');
-  // var swiperWrapDom = document.querySelector('.swiper-wrap');
-  // var playVideo = document.querySelector('.our-name');
   var musicCloseDom = musicDom.querySelector('.music-close');
   var curImgDom = document.getElementById('current-img');
   if ( audioDom.readyState == 4) { 
@@ -259,7 +246,6 @@
           try {
               musicCloseDom.classList.add('rotate');
           } catch (error) {
-              // console.log('error', error);
           }
       }, false);
       audioDom.addEventListener('canplaythrough', function () {
